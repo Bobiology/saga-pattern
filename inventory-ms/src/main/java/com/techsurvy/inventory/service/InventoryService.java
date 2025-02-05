@@ -11,13 +11,6 @@ import java.util.Map;
 
 @Service
 public class InventoryService {
-    /*private final InventoryRepository inventoryRepository;
-
-    public InventoryService(InventoryRepository inventoryRepository) {
-        this.inventoryRepository = inventoryRepository;
-    }
-
-     */
     private Map<Integer, Integer> inventoryMap;
 
     @PostConstruct
