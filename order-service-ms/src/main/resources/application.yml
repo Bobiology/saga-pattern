@@ -1,0 +1,18 @@
+server:
+    port: 8080
+spring:
+    application:
+        name: order-service-ms
+    cloud:
+        function:
+            definition: supplier;consumer
+        stream:
+            bindings:
+                supplier-out-0:
+                    destination: order-created
+                consumer-in-0:
+                    destination: order-updated
+---
+spring:
+    jpa:
+        defer-datasource-initialization: true
